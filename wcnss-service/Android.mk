@@ -23,7 +23,7 @@ ifeq ($(TARGET_USES_WCNSS_MAC_ADDR_REV),true)
 LOCAL_CFLAGS += -DWCNSS_QMI_MAC_ADDR_REV
 endif
 ifneq ($(QCPATH),)
-LOCAL_CFLAGS += -DWCNSS_QMI
+LOCAL_CFLAGS += -DWCNSS_QMI -DMDM_DETECT
 LOCAL_SHARED_LIBRARIES += libwcnss_qmi
 ifeq ($(filter 10% Q% q%,$(TARGET_PLATFORM_VERSION)),)
 #For Android R and above, assuming not compiling on Q and lower
